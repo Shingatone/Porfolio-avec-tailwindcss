@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              green: "#05403c",
+              darkgreen: "#1e3a34",
+              yellow: "#fac322",
+              grey: "#afb4b9",
+            },
+            backgroundImage: {
+              "d-heros": "url('/images/heros.jpg')",
+            },
+          },
+        },
+      };
+    </script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body class="bg-green text-white">
+    <header>
+      <nav class="flex flex-row justify-between items-center p-4">
+        <div><strong>Kalo Soualio</strong></div>
+        <button
+          type="menu"
+          class="block sm:hidden border-2 px-2 py-0 border-gray-300 rounded-md"
+          id="menu-toggle"
+        >
+          <i class="fa-sharp fa-solid fa-bars text-2xl m-0 p-0"></i>
+        </button>
+        <div
+          class="absolute inset-0 sm:inset-auto bg-slate-700 hidden sm:block sm:bg-transparent flex-row gap-2 p-4"
+          id="menu"
+        >
+          <ul class="flex sm:flex-row items-center gap-2 text-white flex-col">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <!-- heros section -->
+      <section class="min-h-screen w-full bg-cover bg-center bg-d-heros">
+        <div
+          class="w-1/2 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center"
+        >
+          <h1 class="text-5xl font-extrabold">I am a Ashadul Islam.</h1>
+          <p class="text-4xl font-light text-yellow mt-2 mb-7">
+            Web Developer & Web Designer
+          </p>
+          <p class="text-base text-grey mt-2 mb-7">
+            I'm a Political I'm a Political man with extensive experience for
+            over 25 years. My xpertise is to create and design.
+          </p>
+          <button
+            class="bg-transparent border-2 border-yellow text-yellow font-semibold px-4 py-2 rounded-md hover:bg-yellow hover:text-white transition-all duration-300"
+          >
+            Contact me
+          </button>
+        </div>
+      </section>
+    </main>
+    <footer></footer>
+  </body>
+  <script>
+    const menuToggle = document.getElementById("menu-toggle");
+    const menu = document.getElementById("menu");
+
+    menuToggle.addEventListener("click", () => {
+      menu.classList.toggle("hidden");
+    });
+  </script>
+</html>
