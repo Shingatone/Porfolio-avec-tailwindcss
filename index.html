@@ -10,8 +10,8 @@
         theme: {
           extend: {
             colors: {
-              green: "#05403c",
-              darkgreen: "#1e3a34",
+              green: "#064f4a",
+              darkgreen: "#043f3a",
               yellow: "#fac322",
               grey: "#afb4b9",
             },
@@ -33,7 +33,7 @@
   <body class="bg-green text-white">
     <header>
       <nav class="flex flex-row justify-between items-center p-4">
-        <div><strong>Kalo Soualio</strong></div>
+        <div><strong class="text-3xl font-bold">Kalo Soualio</strong></div>
         <button
           type="menu"
           class="block sm:hidden border-2 px-2 py-0 border-gray-300 rounded-md"
@@ -41,21 +41,36 @@
         >
           <i class="fa-sharp fa-solid fa-bars text-2xl m-0 p-0"></i>
         </button>
-        <div
-          class="absolute inset-0 sm:inset-auto bg-slate-700 hidden sm:block sm:bg-transparent flex-row gap-2 p-4"
-          id="menu"
-        >
-          <ul class="flex sm:flex-row items-center gap-2 text-white flex-col">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Projects</a></li>
-            <li><a href="#">Contact</a></li>
+        <div class="" id="menu">
+          <ul class="flex sm:flex-row items-center gap-3 text-white flex-col">
+            <li>
+              <a
+                href="#"
+                class="hover:text-yellow transition-all duration-300 font-bold"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="hover:text-yellow transition-all duration-300 font-bold"
+                >Projects</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="hover:text-yellow transition-all duration-300 font-bold"
+                >Contact</a
+              >
+            </li>
           </ul>
         </div>
       </nav>
     </header>
     <main>
       <!-- heros section -->
-      <section class="min-h-screen w-full bg-cover bg-center bg-d-heros">
+      <section class="h-screen w-full bg-cover bg-center bg-center bg-d-heros">
         <div
           class="w-1/2 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center"
         >
@@ -63,7 +78,7 @@
           <p class="text-4xl font-light text-yellow mt-2 mb-7">
             Web Developer & Web Designer
           </p>
-          <p class="text-base text-grey mt-2 mb-7">
+          <p class="text-base text-grey mt-2 mb-7 w-[60%] mx-auto">
             I'm a Political I'm a Political man with extensive experience for
             over 25 years. My xpertise is to create and design.
           </p>
@@ -74,6 +89,95 @@
           </button>
         </div>
       </section>
+      <!-- About section -->
+      <section class="bg-darkgreen text-white grid grid-cols-2 py-20">
+        <div class="mx-auto">
+          <img src="./images/About.png" alt="About images" class="w-full" />
+        </div>
+        <div class="">
+          <h2 class="text-xl font-light text-yellow mb-4">About Me</h2>
+          <p class="text-3xl font-extrabold mt-3 mb-4">
+            My Real Life is Up to You? I am a <br />
+            <span class="text-yellow">WordPress Developer</span>
+          </p>
+          <p class="text-base text-grey mt-2 mb-7 w-[75%] leading-loose">
+            I’m a web developer and graphic designer living in New York, USA. I
+            spend my days with my hands in many different areas of web
+            development from back end programming to front end engineering.
+          </p>
+          <ul
+            class="text-base text-grey mt-2 mb-7 w-[100%] mx-auto grid grid-cols-2 leading-loose"
+          >
+            <li>
+              <i class="fa-sharp fa-solid fa-check"></i> Different of web
+              development
+            </li>
+            <li>
+              <i class="fa-sharp fa-solid fa-check"></i> Graphic designer living
+            </li>
+            <li>
+              <i class="fa-sharp fa-solid fa-check"></i> Gun Violence Prevention
+            </li>
+            <li>
+              <i class="fa-sharp fa-solid fa-check"></i> Jiusmod tempor
+              incididunt
+            </li>
+            <li>
+              <i class="fa-sharp fa-solid fa-check"></i> Eiusmod tempor incidid
+              labore
+            </li>
+          </ul>
+          <div class="flex gap-4 mt-14">
+            <button class="bg-yellow text-gray-800 font-bold px-8 py-3 rounded">
+              Cv Download
+            </button>
+          </div>
+        </div>
+      </section>
+      <!-- contacts section -->
+      <div class="bg-darkgreen pb-20">
+        <div
+          class="border-2 border-[#366561] text-white grid grid-cols-3 gap-2 py-10 px-5 w-[80%] mx-auto"
+        >
+          <div>
+            <h5 class="text-3 font-bold mb-5">CONTACT NOW</h5>
+            <ul>
+              <li>
+                <i class="fa-solid fa-envelope text-yellow"></i>
+                example@example.com
+              </li>
+              <li>
+                <i class="fa-solid fa-phone text-yellow mt-4"></i> +012 345 678
+                910
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h5 class="text-3 font-bold mb-5">ADDRESS</h5>
+            <ul>
+              <li>
+                <i class="fa-sharp fa-solid fa-location-dot text-yellow"></i>
+                123 West 12th Street, Suite 456 New York, NY 123456
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h5 class="text-3 font-bold mb-5">SOCIAL MEDIA</h5>
+            <ul>
+              <li>
+                <i class="fa-regular fa-message text-yellow"></i> Also find us
+                social media below
+              </li>
+            </ul>
+            <div class="flex gap-4 mt-4">
+              <i class="fa-brands fa-facebook-f text-yellow"></i>
+              <i class="fa-brands fa-twitter text-yellow"></i>
+              <i class="fa-brands fa-instagram text-yellow"></i>
+              <i class="fa-brands fa-linkedin-in text-yellow"></i>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
     <footer></footer>
   </body>
