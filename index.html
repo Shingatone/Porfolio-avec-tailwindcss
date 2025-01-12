@@ -16,7 +16,7 @@
               grey: "#afb4b9",
             },
             backgroundImage: {
-              "d-heros": "url('/images/heros.jpg')",
+              "d-heros": "url('./images/heros.jpg')",
             },
           },
         },
@@ -31,7 +31,7 @@
     />
   </head>
   <body class="bg-green text-white">
-    <header>
+    <header class="fixed z-50 w-full bg-green bg-opacity-70">
       <nav class="flex flex-row justify-between items-center p-4">
         <div><strong class="text-3xl font-bold">Kalo Soualio</strong></div>
         <button
@@ -70,15 +70,19 @@
     </header>
     <main>
       <!-- heros section -->
-      <section class="h-screen w-full bg-cover bg-center bg-center bg-d-heros">
+      <section
+        class="h-screen w-full bg-cover bg-center bg-[url('./images/heros.jpg')] before:w-full before:h-full before:absolute before:inset-0 before:bg-black before:z-10 before:opacity-60"
+      >
         <div
-          class="w-1/2 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center"
+          class="w-[90%] md:w-1/2 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center z-20"
         >
-          <h1 class="text-5xl font-extrabold">I am a Ashadul Islam.</h1>
-          <p class="text-4xl font-light text-yellow mt-2 mb-7">
+          <h1 class="text-4xl font-extrabold">I am a Kalo Soualio.</h1>
+          <p class="text-2xl font-light text-yellow mt-2 mb-7">
             Web Developer & Web Designer
           </p>
-          <p class="text-base text-grey mt-2 mb-7 w-[60%] mx-auto">
+          <p
+            class="text-base text-grey mt-2 mb-7 w-[80%] md:w-[80%] lg:w-[50%] mx-auto"
+          >
             I'm a Political I'm a Political man with extensive experience for
             over 25 years. My xpertise is to create and design.
           </p>
@@ -90,23 +94,29 @@
         </div>
       </section>
       <!-- About section -->
-      <section class="bg-darkgreen text-white grid grid-cols-2 py-20">
+      <section
+        class="bg-darkgreen text-white grid grid-cols-1 md:grid-cols-2 py-20"
+      >
         <div class="mx-auto">
           <img src="./images/About.png" alt="About images" class="w-full" />
         </div>
         <div class="">
-          <h2 class="text-xl font-light text-yellow mb-4">About Me</h2>
-          <p class="text-3xl font-extrabold mt-3 mb-4">
+          <h2 class="text-lg lg:text-xl font-light text-yellow mb-4">
+            About Me
+          </h2>
+          <p class="text-xl lg:text-3xl font-extrabold mt-3 mb-4">
             My Real Life is Up to You? I am a <br />
             <span class="text-yellow">WordPress Developer</span>
           </p>
-          <p class="text-base text-grey mt-2 mb-7 w-[75%] leading-loose">
+          <p
+            class="text-sm lg:text-base text-grey mt-2 mb-7 w-[100%] lg:w-[70%] leading-loose"
+          >
             I’m a web developer and graphic designer living in New York, USA. I
             spend my days with my hands in many different areas of web
             development from back end programming to front end engineering.
           </p>
           <ul
-            class="text-base text-grey mt-2 mb-7 w-[100%] mx-auto grid grid-cols-2 leading-loose"
+            class="text-sm lg:text-base text-grey mt-2 mb-7 w-[100%] mx-auto grid grid-cols-1 md:grid-cols-2 leading-loose"
           >
             <li>
               <i class="fa-sharp fa-solid fa-check"></i> Different of web
@@ -137,7 +147,7 @@
       <!-- contacts section -->
       <div class="bg-darkgreen pb-20">
         <div
-          class="border-2 border-[#366561] text-white grid grid-cols-3 gap-2 py-10 px-5 w-[80%] mx-auto"
+          class="border-2 border-[#366561] text-white grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 py-10 px-5 w-[80%] mx-auto"
         >
           <div>
             <h5 class="text-3 font-bold mb-5">CONTACT NOW</h5>
@@ -178,8 +188,104 @@
           </div>
         </div>
       </div>
+      <!-- section nos service -->
+      <section class="my-20">
+        <h1 class="text-4xl font-extrabold text-center mb-20">Our Service</h1>
+        <div class="grid grid-cols-3 gap-1 w-[80%] mx-auto">
+          <div class="bg-darkgreen text-center py-14 px-10">
+            <div class="mb-10">
+              <i class="fa-solid fa-display text-[#ffde00] text-6xl"></i>
+            </div>
+            <h2 class="text-xl font-bold mb-6">Web & Mobile Apps</h2>
+            <p class="text-grey">
+              Lorem ipsum dolor sit amet, nsectetur adipisicing elit, sed do
+              eiusmod empor incididunt ut labore et dolore
+            </p>
+          </div>
+          <div class="bg-darkgreen text-center py-14 px-10">
+            <div class="mb-10">
+              <i class="fa-solid fa-laptop-code text-[#ffde00] text-6xl"></i>
+            </div>
+            <h2 class="text-xl font-bold mb-6">Web & Mobile Apps</h2>
+            <p class="text-grey">
+              Lorem ipsum dolor sit amet, nsectetur adipisicing elit, sed do
+              eiusmod empor incididunt ut labore et dolore
+            </p>
+          </div>
+          <div class="bg-darkgreen text-center py-14 px-10">
+            <div class="mb-10">
+              <i class="fa-solid fa-search text-[#ffde00] text-6xl"></i>
+            </div>
+            <h2 class="text-xl font-bold mb-6">SEO Marketing</h2>
+            <p class="text-grey">
+              Lorem ipsum dolor sit amet, nsectetur adipisicing elit, sed do
+              eiusmod empor incididunt ut labore et dolore
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- section contact me -->
+      <section class="bg-darkgreen text-white py-20">
+        <form action="./index.html">
+          <div class="w-[80%] mx-auto flex flex-col gap-4">
+            <div class="grid grid-cols-2 gap-4">
+              <div>
+                <input
+                  type="text"
+                  placeholder="Your Name"
+                  class="w-full bg-green text-white px-4 py-2 border-b border-b-[#fabf15] border-opacity-30 hover:border-opacity-100 focus:outline-none"
+                />
+              </div>
+              <div>
+                <input
+                  type="email"
+                  placeholder="Your Email"
+                  class="w-full bg-green text-white px-4 py-2 border-b border-b-[#fabf15] border-opacity-30 hover:border-opacity-100 focus:outline-none"
+                />
+              </div>
+              <div>
+                <input
+                  type="text"
+                  placeholder="Your Phone"
+                  class="w-full bg-green text-white px-4 py-2 border-b border-b-[#fabf15] border-opacity-30 hover:border-opacity-100 focus:outline-none"
+                />
+              </div>
+              <div>
+                <input
+                  type="text"
+                  placeholder="Your Subject"
+                  class="w-full bg-green text-white px-4 py-2 border-b border-b-[#fabf15] border-opacity-30 hover:border-opacity-100 focus:outline-none"
+                />
+              </div>
+            </div>
+            <div>
+              <textarea
+                name="message"
+                id="message"
+                cols="30"
+                rows="5"
+                placeholder="Your Message"
+                class="w-full bg-green text-white px-4 py-2 border-b border-b-[#fabf15] border-opacity-30 hover:border-opacity-100 focus:outline-none"
+              ></textarea>
+            </div>
+            <div>
+              <button
+                type="submit"
+                class="bg-[#fabf15] text-black font-bold px-16 py-4 rounded"
+              >
+                SEND MESSAGE
+              </button>
+            </div>
+          </div>
+        </form>
+      </section>
     </main>
-    <footer></footer>
+    <footer>
+      <div class="text-white py-10 text-center">
+        <hr class="border-b border-[#afb4b9] w-[80%] mx-auto mb-6" />
+        <p>&copy; 2025 Kalo Soualio. All Rights Reserved.</p>
+      </div>
+    </footer>
   </body>
   <script>
     const menuToggle = document.getElementById("menu-toggle");
