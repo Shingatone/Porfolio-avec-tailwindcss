@@ -15,9 +15,6 @@
                             yellow: '#fac322',
                             grey: '#afb4b9',
                         },
-                        backgroundImage: {
-                            'd-heros': "url('./images/heros.jpg')",
-                        },
                     },
                 },
             };
@@ -38,32 +35,49 @@
                 </div>
                 <button
                     type="menu"
-                    class="block sm:hidden border-2 px-2 py-0 border-gray-300 rounded-md"
+                    class="block md:hidden border-2 px-2 py-0 border-gray-300 rounded-md"
                     id="menu-toggle"
                 >
                     <i class="fa-sharp fa-solid fa-bars text-2xl m-0 p-0"></i>
                 </button>
-                <div class="" id="menu">
+                <div
+                    class="absolute md:static left-0 top-16 bg-green md:bg-transparent w-full md:w-auto min-h-[30vh] md:min-h-fit md:flex items-center px-6 py-10 md:py-0 hidden"
+                    id="menu"
+                >
                     <ul
-                        class="flex sm:flex-row items-center gap-3 text-white flex-col"
+                        class="flex flex-col md:flex-row md:items-center gap-10 md:gap-5 text-white"
                     >
                         <li>
                             <a
-                                href="#"
+                                href="./index.html"
                                 class="hover:text-yellow transition-all duration-300 font-bold"
                                 >Home</a
                             >
                         </li>
                         <li>
                             <a
-                                href="#"
+                                href="#works"
                                 class="hover:text-yellow transition-all duration-300 font-bold"
                                 >Projects</a
                             >
                         </li>
                         <li>
                             <a
-                                href="#"
+                                href="#about"
+                                class="hover:text-yellow transition-all duration-300 font-bold"
+                                >About</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="#services"
+                                class="hover:text-yellow transition-all duration-300 font-bold"
+                                >Services</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="#contact"
                                 class="hover:text-yellow transition-all duration-300 font-bold"
                                 >Contact</a
                             >
@@ -75,7 +89,7 @@
         <main>
             <!-- heros section -->
             <section
-                class="h-[50vh] lg:h-screen w-full relative bg-cover bg-center bg-[url('./images/heros.jpg')] before:w-full before:h-full before:absolute before:inset-0 before:bg-black before:z-10 before:opacity-60"
+                class="h-[50vh] lg:h-screen w-full relative bg-cover bg-center bg-[url('./images/m-heros.jpg')] md:bg-[url('./images/heros.jpg')] before:w-full before:h-full before:absolute before:inset-0 before:bg-black before:z-10 before:opacity-60"
             >
                 <div
                     class="w-[90%] md:w-1/2 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center z-20"
@@ -103,6 +117,7 @@
             <!-- About section -->
             <section
                 class="bg-darkgreen text-white grid grid-cols-1 md:grid-cols-2 px-5 py-20"
+                id="about"
             >
                 <div class="mx-auto">
                     <img
@@ -213,9 +228,71 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Work Section -->
+            <section class="my-20">
+                <h1
+                    class="text-4xl font-extrabold text-center mb-20"
+                    id="works"
+                >
+                    My Projects
+                </h1>
+                <div
+                    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 lg:gap-5 w-[90%] md:w-[95%] lg:w-[80%] mx-auto"
+                >
+                    <div class="project_item">
+                        <img
+                            src="./images/img_3.webp"
+                            alt=""
+                            class="ease-in duration-300 hover:scale-110"
+                        />
+                        <h4 class="text-xl font-bold mb-6 mt-6">
+                            Task management application (React, Firebase)
+                        </h4>
+                        <p class="description">
+                            A web application allowing users to create,
+                            organize, and track their daily tasks with features
+                            like lists, priorities, and notifications.
+                        </p>
+                    </div>
+                    <div class="project_item">
+                        <img
+                            src="./images/img_2.webp"
+                            alt=""
+                            class="ease-in duration-300 hover:scale-110"
+                        />
+                        <h4 class="text-xl font-bold mb-6 mt-6">
+                            Personal Portfolio (HTML, CSS, JavaScript)
+                        </h4>
+                        <p class="description">
+                            A showcase website presenting your background,
+                            skills, projects, and contact information for better
+                            professional visibility.
+                        </p>
+                    </div>
+                    <div class="project_item">
+                        <img
+                            src="./images/img_1.webp"
+                            alt=""
+                            class="ease-in duration-300 hover:scale-110"
+                        />
+                        <h4 class="text-xl font-bold mb-6 mt-6">
+                            Redesign of a company website (SEO, Performance)
+                        </h4>
+                        <p class="description">
+                            A project to modernize a website to improve its
+                            search engine ranking and optimize loading times.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
             <!-- section nos service -->
             <section class="my-20">
-                <h1 class="text-4xl font-extrabold text-center mb-20">
+                <h1
+                    class="text-4xl font-extrabold text-center mb-20"
+                    id="services"
+                >
                     Our Service
                 </h1>
                 <div
@@ -267,7 +344,7 @@
                 </div>
             </section>
             <!-- section contact me -->
-            <section class="bg-darkgreen text-white py-20">
+            <section class="bg-darkgreen text-white py-20" id="contact">
                 <form action="./index.html">
                     <div
                         class="w-[90%] md:w-[95%] lg:w-[80%] mx-auto flex flex-col gap-4"
@@ -324,10 +401,20 @@
                 </form>
             </section>
         </main>
-        <footer>
-            <div class="text-white py-10 text-center">
-                <hr class="border-b border-[#afb4b9] w-[80%] mx-auto mb-6" />
-                <p>&copy; 2025 Kalo Soualio. All Rights Reserved.</p>
+        <footer class="flex flex-row justify-center">
+            <div class="text-white py-10 text-center w-[80%]">
+                <hr class="border-b border-[#afb4b9] w-[100%] mx-auto mb-6" />
+                <div
+                    class="flex flex-col items-center md:flex-row md:justify-between"
+                >
+                    <p>&copy; 2025 Kalo Soualio. All Rights Reserved.</p>
+                    <div class="flex gap-4 mt-4">
+                        <i class="fa-brands fa-facebook-f text-yellow"></i>
+                        <i class="fa-brands fa-twitter text-yellow"></i>
+                        <i class="fa-brands fa-instagram text-yellow"></i>
+                        <i class="fa-brands fa-linkedin-in text-yellow"></i>
+                    </div>
+                </div>
             </div>
         </footer>
     </body>
